@@ -10,12 +10,13 @@
     character = (Character*)[CCBReader load:@"Character"];
     [physicsNode addChild:character];
     [self addObstacle];
+    // put update code here
+    timeSinceObstacle = 0.0f;
 }
 
 -(void)update:(CCTime)delta
 {
-    // put update code here
-    timeSinceObstacle = 0.0f;
+
     
     // Increment the time since the last obstacle was added
     timeSinceObstacle += delta; // delta is approximately 1/60th of a second
